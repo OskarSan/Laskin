@@ -7,12 +7,100 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/outcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Result"
+        android:textColor="@color/black"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plusButton"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <EditText
+        android:id="@+id/giveNumberOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Give number"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/giveNumberTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Give number"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/giveNumberOne" />
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:maxWidth="100dp"
+        android:minWidth="100dp"
+        android:onClick="addition"
+        android:text="+"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/minusButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/giveNumberOne" />
+
+    <Button
+        android:id="@+id/minusButton"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:maxWidth="100dp"
+        android:minWidth="100dp"
+        android:onClick="subtraction"
+        android:text="-"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/multiplicationButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/giveNumberOne" />
+
+    <Button
+        android:id="@+id/multiplicationButton"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="100dp"
+        android:maxWidth="100dp"
+        android:minWidth="100dp"
+        android:onClick="multiplication"
+        android:text="X"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/divisionButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/giveNumberOne" />
+
+    <Button
+        android:id="@+id/divisionButton"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="100dp"
+        android:maxWidth="100dp"
+        android:minWidth="100dp"
+        android:onClick="division"
+        android:text="/"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/giveNumberOne" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
